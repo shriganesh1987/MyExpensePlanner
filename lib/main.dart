@@ -22,6 +22,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // return Platform.isIOS ? CupertinoApp(
+      //   title: 'Personal Expenses',
+      //   theme: CupertinoThemeData(
+      //     primarySwatch: Colors.purple,
+      //     accentColor: Colors.amber,
+      //     fontFamily: 'QuickSand',
+      //     textTheme: ThemeData.light().textTheme.copyWith(
+      //         title: TextStyle(
+      //           fontFamily: 'OpenSans',
+      //           fontSize: 18,
+      //           fontWeight: FontWeight.bold,
+      //         ),
+      //         button: TextStyle(
+      //           color: Colors.white,
+      //         )),
+      //     appBarTheme: AppBarTheme(
+      //       textTheme: ThemeData.light().textTheme.copyWith(
+      //             title: TextStyle(
+      //               fontFamily: 'OpenSans',
+      //               fontSize: 20,
+      //               fontWeight: FontWeight.bold,
+      //             ),
+      //           ),
+      //     ),
+      //   ),
+      //   home: MyHomePage(),) : MaterialApp(
       title: 'Personal Expenses',
       theme: ThemeData(
         primarySwatch: Colors.purple,
@@ -163,7 +189,10 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Show Chart'),
+                  Text(
+                    'Show Chart',
+                    style: Theme.of(context).textTheme.title,
+                  ),
                   Switch.adaptive(
                     activeColor: Theme.of(context).accentColor,
                     value: _showChart,
