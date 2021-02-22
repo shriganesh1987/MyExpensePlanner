@@ -93,7 +93,7 @@ class _NewTransactionState extends State<NewTransaction> {
                           ? 'No date chosen!'
                           : 'Picked Date ${DateFormat.yMd().format(_selectedDate)}'),
                     ),
-                    AdaptiveButton('Choose Date', _presentDatePicker,
+                    AdaptiveButton('Choose Date', _presentDatePicker),
                   ],
                 ),
               ),
